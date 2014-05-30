@@ -1,0 +1,57 @@
+body { 
+	background-color: black; 
+	color: white; 
+	font-family: 'Nova Square', cursive;
+}
+
+.xxxx { 
+	font-family: 'Keania One', cursive;
+	font-size: 72px; 
+}
+
+.zabbix {
+	color: white;
+	text-align: left;
+}
+
+.lgg { 
+	padding-top: 4px;
+	line-height: 20px;
+	color: #00FFFF;
+	text-align: left;
+}
+
+h3 {
+	-webkit-margin-before: 0.6em;
+	-webkit-margin-after: 0em;
+	color: #00FF00;
+}
+
+.stats {
+	background-color: #009999;
+	border:2px solid;
+	border-radius:25px;
+	width: 800px;
+	padding: 8px;
+}
+
+th {
+	color: #00FFFF;
+}
+
+.peer_down {
+	background-color: #AA0000;
+}
+
+.peer {
+	color: #00FF00;
+	text-align: center;
+}
+ 
+.ok {
+	color: #00FF00;
+}
+
+.help {
+	color: #A00000;
+}
