@@ -273,7 +273,7 @@ class ProxyRequest(proxy.ProxyRequest):
         html += "</head>"
         html += "<body>"
 
-        html += "<table><tr><td class='XXXX'>XXXX</td>"
+        html += "<table><tr><td class='XXXX'>DVLA</td>"
         html += "<td class='LGG'>Legacy<br/>Gateway<br/>Guardian</td></tr></table>"
 
         html += "<h3>Cluster Status</h3><BR/>\n"
