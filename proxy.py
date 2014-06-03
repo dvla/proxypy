@@ -361,6 +361,13 @@ class ProxyRequest(proxy.ProxyRequest):
         if not rest: rest += '/'
         clientFactory = class_(self.method, rest, self.clientproto, headers,s, self)
 
+        if headers.has_key('x-real-ip'):
+            ip = headers['x-real-ip']
+        else:
+            ip = self.client.host
+
+        log.msg("client=%s method=%s uri=%s port=%s" %(ip,self.method,rest,self.host.port))
+
         request_queue = self.transport.server.factory.request_queue
         statistics    = self.transport.server.factory.statistics
 
