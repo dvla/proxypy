@@ -3,7 +3,7 @@
 #                                                                           #
 #   proxy.py                                                                #
 #                                                                           #
-#   Distributed Rate Limiting Proxy 					    #
+#   Distributed Rate Limiting Proxy 					                    #
 #   Gareth Bult, 2014                                                       #
 #                                                                           #
 #############################################################################
@@ -19,7 +19,6 @@
 #
 import sys
 import Queue
-import syslog
 #
 from ConfigParser               import RawConfigParser as ConfParser
 from time                       import time, sleep
@@ -308,7 +307,7 @@ class ProxyRequest(proxy.ProxyRequest):
         rep_ipv4 = "unknown"
         if headers.has_key('host'):      rep_host = headers['host']
         if headers.has_key('x-real-ip'): rep_ipv4 = headers['x-real-ip']
-        html += "<p>Load balancer is [%s] Real client IP is [%s]</p><br/>" % (rep_host,rep_ipv4)
+        html += "<p>Load balancer is [<span class='peer'>%s</span>] Real client IP is [<span class='peer'>%s</span>] this host is [<span class='peer'>%s</span>]</p><br/>" % (rep_host,rep_ipv4,gethostname())
 
         html += "<h3>Endpoint Connections</h3><BR/>\n"
         html += "<table class='stats' cellspacing=2 cellpadding=4>\n"
