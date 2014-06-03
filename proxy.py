@@ -19,6 +19,7 @@
 #
 import sys
 import Queue
+import syslog
 #
 from ConfigParser               import RawConfigParser as ConfParser
 from time                       import time, sleep
@@ -620,10 +621,11 @@ reactor.suggestThreadPoolSize(30)
 #
 #   And log everything to stdout
 #
-if debug:
-    log.startLogging(sys.stdout)
-else:
-    log.startLogging(logfile.LogFile(LOGFILE,".",rotateLength=1024*1024*10))
+#if debug:
+log.startLogging(sys.stdout)
+#else:
+    #log.startLogging(logfile.LogFile(LOGFILE,".",rotateLength=1024*1024*10))
+if not debug:
     application = service.Application("Proxy Server")
 
 monitor = Monitor(getOpt('globals','zabbix' ,'127.0.0.1'))
