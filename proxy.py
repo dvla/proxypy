@@ -480,11 +480,6 @@ class ProxyFactory(http.HTTPFactory):
             log.msg("** 'endpoint' must be of the format: <address>:<port>")
             return
 
-        self.keyfile = getOpt(section_name,'keyfile','')
-        io = open(self.keyfile,'r')
-        io.close()
-
-
         try:
             ssl = getOpt(section_name,'ssl','no')
             self.ssl = not (ssl == 'no')
