@@ -15,5 +15,5 @@ styles:
 	scp style.css root@micro2:/var/www/
 
 rpm:
-	tap2rpm -y python -t proxy.py -m "Gareth Bult" -e "Distributed Rate Limiting Proxy" --set-version=${VERSION}
+	tap2rpm -y python -t proxy.py -m "HM Government (Driver and Vehicle Licensing Agency)" -e "Distributed Rate Limiting Proxy" --set-version=${VERSION}
 
